@@ -1,0 +1,209 @@
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  margin: 0;
+  padding: 20px; /* Add padding to the body */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align items to the top */
+  min-height: 100vh; /* Use min-height instead of height */
+}
+
+/* App Container */
+.App {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 2.5rem;
+  width: 450px;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in-out;
+  margin: 20px 0; /* Add margin to the top and bottom */
+}
+
+/* Title */
+h1 {
+  font-size: 2.2rem;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  animation: slideDown 0.8s ease-in-out;
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+/* Input Group */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  animation: slideUp 0.8s ease-in-out;
+}
+
+.input-group label {
+  font-weight: 500;
+  color: #fff;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.input-group input,
+.input-group select {
+  padding: 0.8rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  font-size: 1rem;
+  color: #fff;
+  transition: all 0.3s ease;
+  appearance: none; /* Remove default arrow */
+  -webkit-appearance: none; /* Remove default arrow for Safari */
+  -moz-appearance: none; /* Remove default arrow for Firefox */
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23fff%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E"); /* Custom arrow */
+  background-repeat: no-repeat;
+  background-position: right 0.8rem center;
+  background-size: 12px;
+}
+
+.input-group input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.input-group input:focus,
+.input-group select:focus {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
+  outline: none;
+}
+
+.input-group select option {
+  background: #333; /* Dark background for options */
+  color: #fff; /* White text for options */
+}
+
+/* Button Styles */
+button {
+  padding: 0.8rem;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: slideUp 0.8s ease-in-out;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #764ba2, #667eea);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* Prediction Result */
+.prediction-result {
+  margin-top: 1.5rem;
+  padding: 1.2rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.prediction-result h2 {
+  font-size: 1.4rem;
+  color: #fff;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Error Message */
+.error-message {
+  color: #ff6b6b;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  animation: shake 0.5s ease-in-out;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: #fff;
+  animation: spin 1s linear infinite;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  75% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

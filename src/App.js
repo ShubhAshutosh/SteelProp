@@ -39,7 +39,7 @@ function App() {
     setPrediction(null);
 
     try {
-      const response = await axios.post('https://flask-steel-five.vercel.app', formData);
+      const response = await axios.post('https://flask-steel-1.onrender.com/predict', formData);
       setPrediction(response.data.predicted_value);
     } catch (err) {
       setError('An error occurred: ' + err.message);
